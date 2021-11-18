@@ -661,6 +661,7 @@ Make sure you check the documentation before creating anything custom.
                         <th scope="col">Title</th>
                         <th scope="col">Artist</th>
                         <th scope="col">Duration</th>
+                        <th scope="col"></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -669,18 +670,21 @@ Make sure you check the documentation before creating anything custom.
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>0:00</td>
+                        <td><span class="btn btn-sm btn-secondary text-white rounded">Delete</span></td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Jacob</td>
                         <td>Thornton</td>
                         <td>0:00</td>
+                        <td><span class="btn btn-sm btn-secondary text-white rounded">Delete</span></td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>Larry</td>
                         <td>The Bird</td>
                         <td>0:00</td>
+                        <td><span class="btn btn-sm btn-secondary text-white rounded">Delete</span></td>
                     </tr>
                     </tbody>
                     <tr>
@@ -688,18 +692,21 @@ Make sure you check the documentation before creating anything custom.
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>0:00</td>
+                        <td><span class="btn btn-sm btn-secondary text-white rounded">Delete</span></td>
                     </tr>
                     <tr>
                         <th scope="row">5</th>
                         <td>Jacob</td>
                         <td>Thornton</td>
                         <td>0:00</td>
+                        <td><span class="btn btn-sm btn-secondary text-white rounded">Delete</span></td>
                     </tr>
                     <tr>
                         <th scope="row">6</th>
                         <td>Larry</td>
                         <td>The Bird</td>
                         <td>0:00</td>
+                        <td><span class="btn btn-sm btn-secondary text-white rounded">Delete</span></td>
                     </tr>
                     </tbody>
                     <tr>
@@ -707,18 +714,21 @@ Make sure you check the documentation before creating anything custom.
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>0:00</td>
+                        <td><span class="btn btn-sm btn-secondary text-white rounded">Delete</span></td>
                     </tr>
                     <tr>
                         <th scope="row">8</th>
                         <td>Jacob</td>
                         <td>Thornton</td>
                         <td>0:00</td>
+                        <td><span class="btn btn-sm btn-secondary text-white rounded">Delete</span></td>
                     </tr>
                     <tr>
                         <th scope="row">9</th>
                         <td>Larry</td>
                         <td>The Bird</td>
                         <td>0:00</td>
+                        <td><span class="btn btn-sm btn-secondary text-white rounded">Delete</span></td>
                     </tr>
                     </tbody>
                 </table>
@@ -764,6 +774,17 @@ Make sure you check the documentation before creating anything custom.
                 jumbo.classList.add("show")
             }, 200);
         }
+
+        const deleteTrack = function (event) {
+            event.path[2].remove()
+        }
+
+        let delBtn = document.querySelectorAll("table tbody tr td span")
+        for (let i=0; i<delBtn.length; i++) {
+            delBtn[i].addEventListener("click", deleteTrack)
+        }
+        
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
